@@ -12,4 +12,12 @@
 		select id,description,create_time from
 		tb_class_four ORDER BY  id DESC limit 1
 	</select>
+    
+    <select id="getAdminUserByUserNameAndPassword" resultMap="AdminUserResult">
+        select id, user_name, user_token
+        from tb_admin_user
+        where username = #{userName} and password_md5 = #{passwordMd5}
+        and is_deleted = 0
+        ORDER BY ID DESC limit 1
+    </select>
 </mapper>
