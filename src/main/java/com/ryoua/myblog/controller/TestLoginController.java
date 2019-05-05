@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/testLogin")
-//测试登陆验证的接口
 public class TestLoginController {
 
     @RequestMapping(value = "/test1", method = RequestMethod.GET)
