@@ -1,4 +1,3 @@
-document.write("<script type='text/javascript' src='../../plugins/kindeditor-4.1.10/kindeditor-all.js'></script>");
 $(function () {
     //隐藏错误提示框
     $('.add-error-info').css("display", "none");

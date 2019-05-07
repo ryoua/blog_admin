@@ -16,6 +16,14 @@
         <property name="suffix" value=".jsp"></property>
     </bean>
 
+    <!-- 图片上传 -->
+    <bean id="multipartResolver"  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 设定默认编码 -->
+        <property name="defaultEncoding" value="UTF-8"></property>
+        <!-- 设定文件上传的最大值为5MB，5*1024*1024 -->
+        <property name="maxUploadSize" value="52428800"></property>
+    </bean>
+
     <!-- Start: 配置json消息转换器 & 参数解析-->
     <bean id="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper">
         <property name="dateFormat">
@@ -45,4 +53,5 @@
 
     <!-- 使用了<url-pattern>/</url-pattern>,所以要对静态资源进行处理 -->
     <mvc:default-servlet-handler/>
+
 </beans>

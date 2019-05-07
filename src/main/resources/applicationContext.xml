@@ -78,5 +78,4 @@
                       expression="(execution(* com.ryoua.myblog.service.*.*(..)))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperation"/>
     </aop:config>
-
 </beans>
